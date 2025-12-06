@@ -1,0 +1,39 @@
+import dayOne
+import dayTwo
+import dayThree
+import dayFour
+import dayFive
+
+import numpy as np
+import os
+
+
+if __name__ == '__main__':
+
+    dirname = os.path.dirname(__file__)
+    inputs = os.path.join(dirname, 'inputs')
+
+    currDay = 'dayFive'
+    filename = os.path.join(inputs, currDay + '\input.txt')
+    filenameSmall = os.path.join(inputs, currDay + '\inputSmall.txt')
+
+    # Day One
+    """zeroCount = dayOne.countIncrease(filenameSmall)
+    zeroCount = dayOne.countIncrease2(filename)
+    print(zeroCount)"""
+
+    # Day Two
+    """totalCount, idSum = dayTwo.parseInput(filename)
+    print("totalCount " + str(totalCount))
+    print("idSum " + str(idSum))"""
+
+    # Day Three
+    """print(dayThree.processInput(filename))"""
+
+    # Day four
+    "print(dayFour.processInput(filename))"
+
+    # Day five
+    print(dayFive.processInput(filenameSmall))
+    print(dayFive.processInput(filename))
+
