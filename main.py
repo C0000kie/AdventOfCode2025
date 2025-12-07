@@ -4,9 +4,11 @@ import dayThree
 import dayFour
 import dayFive
 import daySix
+import daySeven
 
 import numpy as np
 import os
+import collections
 
 
 if __name__ == '__main__':
@@ -14,7 +16,7 @@ if __name__ == '__main__':
     dirname = os.path.dirname(__file__)
     inputs = os.path.join(dirname, 'inputs')
 
-    currDay = 'daySix'
+    currDay = 'daySeven'
     filename = os.path.join(inputs, currDay + '\input.txt')
     filenameSmall = os.path.join(inputs, currDay + '\inputSmall.txt')
 
@@ -40,7 +42,8 @@ if __name__ == '__main__':
     """
 
     # Day Six
-    print(daySix.processInputPartOne(filename))
-    print(daySix.processInputPartTwo(filename))
+    """print(daySix.processInputPartOne(filename))
+    print(daySix.processInputPartTwo(filename))"""
 
-
+    # Day Seven
+    print(daySeven.processInputPartOne(filename))
