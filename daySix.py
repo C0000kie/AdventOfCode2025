@@ -55,7 +55,7 @@ def processInputPartOne(pth):
         problemSolution = np.array([float(elt) for elt in firstLine.split()])
         for line in file:
             currLine = line.rstrip()
-            if currLine.__contains__("+") or currLine.__contains__("*"):
+            if "+" in currLine or "*" in currLine:
                 break
             currArray = np.array([float(elt) for elt in currLine.split()])
             problemSolution = reduceArrays(problemSolution, currArray, operators)
@@ -64,17 +64,13 @@ def processInputPartOne(pth):
 
 def processInputPartTwo(pth):
     with open(pth) as file:
-        #extract operators
-        for line in file:
-            pass
-        operators = list(line)
-
-    with open(pth) as file:
         inputNums = list( file.readline())
 
         for line in file:
-            if line.__contains__("+") or line.__contains__("*"):
-                break
-            currLine = line
-            inputNums = combineLines(inputNums, list(currLine))
+            if "+" in line or "*"  in line:
+                operators = list(line)
+            else:
+                currLine = line
+                inputNums = combineLines(inputNums, list(currLine))
+
     return reducePartTwo(inputNums, operators)
