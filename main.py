@@ -5,6 +5,8 @@ import dayFour
 import dayFive
 import daySix
 import daySeven
+import dayEight
+import newSol
 
 import numpy as np
 import os
@@ -16,7 +18,7 @@ if __name__ == '__main__':
     dirname = os.path.dirname(__file__)
     inputs = os.path.join(dirname, 'inputs')
 
-    currDay = 'daySeven'
+    currDay = 'dayEight'
     filename = os.path.join(inputs, currDay + '\input.txt')
     filenameSmall = os.path.join(inputs, currDay + '\inputSmall.txt')
 
@@ -46,4 +48,8 @@ if __name__ == '__main__':
     print(daySix.processInputPartTwo(filename))"""
 
     # Day Seven
-    print(daySeven.processInputPartOne(filename))
+    """print(daySeven.processInputPartOne(filename))"""
+
+    # Day Eight
+    print(dayEight.processInput(filenameSmall, 10))
+    print(dayEight.processInput(filename, 1000))
