@@ -8,6 +8,7 @@ import daySix
 import daySeven
 import dayEight
 import newSol
+import dayTen
 
 import numpy as np
 import os
@@ -19,7 +20,7 @@ if __name__ == '__main__':
     dirname = os.path.dirname(__file__)
     inputs = os.path.join(dirname, 'inputs')
 
-    currDay = 'dayNine'
+    currDay = 'dayTen'
     filename = os.path.join(inputs, currDay + '\input.txt')
     filenameSmall = os.path.join(inputs, currDay + '\inputSmall.txt')
 
@@ -56,14 +57,16 @@ if __name__ == '__main__':
     print(dayEight.processInput(filename, 1000))"""
 
     # Day Nine
+    """filename = os.path.join(inputs, currDay + '\edgeCase.txt')
+
     print(dayNine.processInput(filename))
-    """pointA = [2,5]
+    pointA = [2,5]
     pointB = [11,1]
     pointA = [0, 1]
     pointB = [1, 0]
 
     allPoints = [[1,2], [500, 200]]
-    print(dayNine.getOtherPoints(pointA, pointB))"""
+    print(dayNine.getOtherPoints(pointA, pointB))
 
     # 105974588 is too low
     #print(dayNine.isInBounds([1,2], allPoints, 'tr'))
@@ -72,5 +75,7 @@ if __name__ == '__main__':
     # 2286850234
     # 9284176
     # 4653414735 => too high
-    # 4781546175 gt
+    # 4781546175 gt"""
 
+    # Day Ten
+    print(dayTen.processInput(filename))
